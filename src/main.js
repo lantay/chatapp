@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 
 Vue.use(VueFire) // this is acting funny not registering with Code
 
-/* eslint-disable no-new */
+/* eslint-disable no-new | adding comment to stage a commit */
 new Vue({
   el: '#app',
   components: { App },

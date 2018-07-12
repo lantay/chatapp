@@ -2,7 +2,7 @@
 
   <div id="app" class="container">
     <div class="page-header">
-      <h1>This Application uses both Firebase and Vue!</h1>
+      <h1>This Application uses both Firebase and Vue!!</h1>
     </div>
 
     <div class="card">
@@ -42,7 +42,7 @@
 
     <div class="card">
       <div class="card-header">
-        <h3>Articles List</h3>
+        <h3>List of Articles</h3>
       </div>
       <div class="card-body">
         <table class="table table-striped">
