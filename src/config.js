@@ -14,4 +14,4 @@ let app = Firebase.initializeApp(config)
 let db = app.database()
 let articlesRef = db.ref('articles')
 
-export default articlesRef //adding comment to stage commit
+export default articlesRef // adding comment to stage commit
