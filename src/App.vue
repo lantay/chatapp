@@ -1,6 +1,6 @@
 <template>
 
-  <div id="app" class="container"> 
+  <div id="app" class="container">
     <div class="page-header">
       <h1>Messages at Journey</h1>
     </div>
