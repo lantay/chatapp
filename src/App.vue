@@ -16,7 +16,7 @@
             <input id="title"
                   type="text"
                   class="form-control"
-                  placeholder="Title"
+                  placeholder="Message"
                   v-model="newArticle.title" />
           </div>
           <div class="form-group mx-sm-3 mb-2">
@@ -24,18 +24,10 @@
             <input id="author"
                   type="text"
                   class="form-control"
-                  placeholder="Author"
+                  placeholder="Your Name"
                   v-model="newArticle.author" />
           </div>
-          <div class="form-group mb-2">
-            <label for="url" class="sr-only">Url</label>
-            <input id="url"
-                  type="text"
-                  class="form-control"
-                  placeholder="http://"
-                  v-model="newArticle.url" />
-          </div>
-          <button class="btn btn-primary mx-sm-3 mb-2">Add</button>
+          <button class="btn btn-primary mx-sm-3 mb-2">Send</button>
         </form>
       </div>
     </div>
@@ -48,22 +40,17 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Delete</th>
+              <th>Message</th>
+              <th>User</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="article in articles" :key="article.id">
               <td>
-                <a :href="article.url">{{ article.title }}</a>
+               <p>{{ article.title }}</p>
               </td>
               <td>{{ article.author }}</td>
               <td>
-                <span class="pointer"
-                      @click="removeArticle(article)">
-                  <i class="fas fa-trash"></i>
-                </span>
               </td>
             </tr>
           </tbody>
@@ -94,8 +81,6 @@ export default {
     addArticle () {
       articlesRef.push(this.newArticle)
       this.newArticle.title = ''
-      // this.newArticle.author = ''
-      this.newArticle.url = ''
     },
     removeArticle (article) {
       articlesRef.child(article['.key']).remove()
