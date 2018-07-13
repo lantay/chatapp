@@ -72,8 +72,6 @@ export default {
     return {
       newArticle: {
         title: '',
-        author: '',
-        url: ''
       }
     }
   },
