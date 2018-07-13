@@ -1,4 +1,5 @@
 // Initialize Firebase
+/* eslint-disable */
 import Firebase from 'firebase'
 
 var config = {

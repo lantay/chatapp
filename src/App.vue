@@ -2,11 +2,11 @@
 
   <div id="app" class="container">
     <div class="page-header">
-      <h1>This Application uses both Firebase and Vue!!</h1>
+      <h1>Messages at Journey</h1>
     </div>
 
     <div class="card">
-      <div class="card-header">Add Book</div>
+      <div class="card-header">Send Message</div>
       <div class="card-body">
         <form id="form"
               class="form-inline"
@@ -42,7 +42,7 @@
 
     <div class="card">
       <div class="card-header">
-        <h3>List of Articles</h3>
+        <h3>Messages:</h3>
       </div>
       <div class="card-body">
         <table class="table table-striped">
@@ -94,7 +94,7 @@ export default {
     addArticle () {
       articlesRef.push(this.newArticle)
       this.newArticle.title = ''
-      this.newArticle.author = ''
+      // this.newArticle.author = ''
       this.newArticle.url = ''
     },
     removeArticle (article) {
