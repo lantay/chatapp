@@ -1,6 +1,6 @@
 <template>
 
-  <div id="app" class="container">
+  <div id="app" class="container"> 
     <div class="page-header">
       <h1>Messages at Journey</h1>
     </div>
@@ -9,15 +9,14 @@
       <div class="card-header">Send Message</div>
       <div class="card-body">
         <form id="form"
-              class="form-inline"
-              @submit.prevent="addArticle">
+              class="form-inline">
           <div class="form-group mb-2">
             <label for="title" class="sr-only">Title</label>
             <input id="title"
                   type="text"
                   class="form-control"
                   placeholder="Message"
-                  v-model="newArticle.title" />
+                   />
           </div>
           <div class="form-group mx-sm-3 mb-2">
             <label for="author" class="sr-only">Author</label>
@@ -25,7 +24,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
-                  v-model="newArticle.author" />
+                   />
           </div>
           <button class="btn btn-primary mx-sm-3 mb-2">Send</button>
         </form>
@@ -45,11 +44,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="article in articles" :key="article.id">
+            <tr>
               <td>
-               <p>{{ article.title }}</p>
+               <p>Message</p>
               </td>
-              <td>{{ article.author }}</td>
+              <td>User</td>
               <td>
               </td>
             </tr>
@@ -60,33 +59,3 @@
   </div>
 
 </template>
-
-<script>
-import articlesRef from './config'
-export default {
-  name: 'app',
-  firebase: {
-    articles: articlesRef
-  },
-  data () {
-    return {
-      newArticle: {
-        title: '',
-      }
-    }
-  },
-  methods: {
-    addArticle () {
-      articlesRef.push(this.newArticle)
-      this.newArticle.title = ''
-    },
-    removeArticle (article) {
-      articlesRef.child(article['.key']).remove()
-    }
-  }
-}
-</script>
-
-<style>
-
-</style>
